@@ -7,6 +7,7 @@ function web_search() {
   typeset -A urls
   urls=(
     $ZSH_WEB_SEARCH_ENGINES
+    brave      "https://search.brave.com/search?q="
     google      "https://www.google.com/search?q="
     bing        "https://www.bing.com/search?q="
     yahoo       "https://search.yahoo.com/search?p="
@@ -19,7 +20,7 @@ function web_search() {
     goodreads   "https://www.goodreads.com/search?q="
     qwant       "https://www.qwant.com/?q="
     givero      "https://www.givero.com/search?q="
-    stackoverflow  "https://stackoverflow.com/search?q="
+    so  "https://stackoverflow.com/search?q="
     wolframalpha   "https://www.wolframalpha.com/input/?i="
     archive     "https://web.archive.org/web/*/"
     scholar        "https://scholar.google.com/scholar?q="
@@ -46,6 +47,7 @@ function web_search() {
 }
 
 
+alias brave='web_search brave'
 alias bing='web_search bing'
 alias google='web_search google'
 alias yahoo='web_search yahoo'
@@ -58,7 +60,7 @@ alias ecosia='web_search ecosia'
 alias goodreads='web_search goodreads'
 alias qwant='web_search qwant'
 alias givero='web_search givero'
-alias stackoverflow='web_search stackoverflow'
+alias so='web_search so'
 alias wolframalpha='web_search wolframalpha'
 alias archive='web_search archive'
 alias scholar='web_search scholar'
@@ -80,3 +82,4 @@ if [[ ${#ZSH_WEB_SEARCH_ENGINES} -gt 0 ]]; then
   done
   unset engines key
 fi
+
